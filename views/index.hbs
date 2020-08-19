@@ -1,0 +1,17 @@
+<div>
+    <form action="/" method="POST">
+        <label for="coordinates">Enter your desired coordinates here:</label>
+        <input type="text" name="latitude" placeholder="Latitude">
+        <input type="text" name="longitude" placeholder="Longitude" />
+        <button type="submit">Submit</button>
+    </form>
+    <div>
+        <h2>{{latitude}}</h2>
+        <h2>{{longitude}}</h2>
+        <ul>
+            {{#each stats}}
+            <li>{{@key}}: {{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
